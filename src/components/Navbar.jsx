@@ -6,10 +6,10 @@ const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 flex justify-center items-center p-4">
+    <nav className="fixed top-0 left-0 w-full z-50 flex justify-center items-center p-4">
       {/* Background Under Buttons */}
       <div
-        className="absolute bg-opacity-30 backdrop-blur-md rounded-full px-6 py-2 shadow-lg"
+        className="absolute top-0 left-0 w-full h-full bg-opacity-30 backdrop-blur-md rounded-full px-6 py-2 shadow-lg"
         style={{
           background: "rgba(255, 255, 255, 0.1)", // Glassmorphism effect
           boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
@@ -18,10 +18,10 @@ const Navbar = () => {
       ></div>
 
       {/* Floating Navbar Buttons */}
-      <div className="relative flex justify-between items-center gap-8">
+      <div className="relative flex justify-between items-center gap-8 w-full max-w-screen-lg px-4">
         {/* Logo with Hover Label */}
         <div
-          className="relative"
+          className="absolute left-4 top-4 z-10"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
